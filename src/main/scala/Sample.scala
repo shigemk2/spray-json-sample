@@ -1,7 +1,8 @@
 package com
 import spray.json._
+import DefaultJsonProtocol._
 
-object Sample extends DefaultJsonProtocol {
+object Sample {
   def main(args: Array[String]) {
     val hoge:List[List[String]] = List(
       List("hoge", "fuga"),
