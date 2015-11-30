@@ -4,9 +4,9 @@ import DefaultJsonProtocol._
 
 object Sample {
   def main(args: Array[String]) {
-    val hoge:List[List[String]] = List(
-      List("hoge", "fuga"),
-      List("piyo", "fuga")
+    val hoge:List[Map[String,String]] = List(
+      Map("hoge"->"fuga"),
+      Map("piyo"->"fuga")
     )
     println(hoge.toJson)
   }
