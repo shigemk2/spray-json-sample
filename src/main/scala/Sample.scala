@@ -22,6 +22,14 @@ object Sample {
       Map("piyo"-> List(4,5,6))
     )
     println(hoge3.toJson)
-    println("------------------------------")
+    // 以下のようなJSONパースはできない
+    // Cannot find JsonWriter or JsonFormat type class for List[scala.collection.immutable.Map[String,scala.collection.immutable.Iterable[Any] with PartialFunction[Int with String,Any]{def seq: scala.collection.immutable.Iterable[Any] with PartialFunction[Int with String,Any]{def seq: scala.collection.immutable.Iterable[Any] with PartialFunction[Int with String,Any]}}]]
+    // println("------------------------------")
+    // val hoge4 = List(
+    //   Map("hoge"-> Map("hoge"->"fuga")),
+    //   Map("piyo"-> List(4,5,6))
+    // )
+    // println(hoge4.toJson)
+    // println("------------------------------")
   }
 }
