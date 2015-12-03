@@ -31,5 +31,13 @@ object Sample {
     // )
     // println(hoge4.toJson)
     // println("------------------------------")
+    case class Jsons(id: Option[Int], name: Option[String], map: Option[Map[String,String]])
+    // val hoge5 = JSONS(Option(1))
+    // println(hoge5.toJson)
+    object MyJsonProtocol extends DefaultJsonProtocol {
+      implicit val jsonFormat = jsonFormat3(Jsons)
+    }
+    import MyJsonProtocol._
+    println(Jsons(Option(1)).toJson)
   }
 }
